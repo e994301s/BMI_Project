@@ -12,12 +12,15 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
+import java.util.Random;
+
 public class SeventhActivity extends Activity {
 
     TextView resultBMI, resultRecommend, resultRecommend1;
     ImageView resultImage;
     int height, weight, weightGoal;
     double bmiResultCalc;
+
 
 
     @Override
@@ -138,6 +141,12 @@ public class SeventhActivity extends Activity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(SeventhActivity.this , SixthActivity.class);
+            // 랜덤 영상 play
+            Random random = new Random();
+            String[] exerciseTitle = {"exercise1","exercise2","exercise3","exercise4"};
+            int exerciseNum = random.nextInt(4);
+            intent.putExtra("exercise", exerciseTitle[exerciseNum]);
+
             startActivity(intent);
         }
     };
