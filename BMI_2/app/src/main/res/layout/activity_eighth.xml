@@ -11,9 +11,25 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="당신의 BMI 기록"
-        android:layout_weight="2"
+        android:layout_weight="1"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색할 성함 : "
+            />
+        <EditText
+            android:id="@+id/search_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
+    </LinearLayout>
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
