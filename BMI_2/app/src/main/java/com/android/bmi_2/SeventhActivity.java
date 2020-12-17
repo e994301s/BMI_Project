@@ -59,7 +59,7 @@ public class SeventhActivity extends Activity {
         } else if (bmiResultCalc>=22.9 && bmiResultCalc<24.9) {
             resultImage.setImageResource(R.drawable.over);
             type = "과체중";
-        } else{
+        } else if (bmiResultCalc>=24.9){
             resultImage.setImageResource(R.drawable.fat);
             type = "비만";
         }
