@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.bmi_2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BMI_2">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"
+            android:label="Gender" />
+        <activity android:name=".ThirdActivity"
+            android:label="Height" />
+        <activity android:name=".FourthActivity"
+            android:label="Weight" />
+        <activity android:name=".FifthActivity"
+            android:label="Result" />
+        <activity android:name=".SixthActivity"
+            android:label="Video" />
+        <activity android:name=".SeventhActivity"
+            android:label="evaluation" />
+        <activity android:name=".EighthActivity"
+            android:label="List" />
+    </application>
+
+</manifest>
