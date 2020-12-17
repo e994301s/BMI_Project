@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:padding="5dp"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -57,7 +58,7 @@
                 android:layout_weight="1"
                 android:textSize="20dp"
                 android:gravity="center"
-                android:text="정상 체중"
+                android:text="표준 체중"
                 />
             <TextView
                 android:id="@+id/weightGoal_seventh"
@@ -79,6 +80,7 @@
         android:adjustViewBounds="true"
         android:maxHeight="300px"
         android:layout_weight="2"
+        android:layout_gravity="center_vertical"
         />
 
     <TextView
@@ -86,7 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textSize="20dp"
+        android:textSize="50dp"
         android:gravity="center"
         android:textStyle="bold"
         />
@@ -96,15 +98,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/resultRecommend1_seventh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:textSize="20dp"
         android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#00BCD4"
+        android:background="#77C8D3"
         android:layout_weight="0.3"
         android:gravity="center"
         >
@@ -114,7 +128,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:gravity="center"
             android:textColor="@color/white"
             />
@@ -123,9 +137,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:gravity="center"
             android:text="저체중"
+            android:textStyle="bold"
             android:textColor="@color/white"
             />
 
@@ -134,7 +149,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
+            android:gravity="center"
             android:textColor="@color/white"
             />
 
@@ -144,7 +160,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#4CAF50"
+        android:background="#7EDF82"
         android:layout_weight="0.3"
         android:gravity="center"
         >
@@ -154,7 +170,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:gravity="center"
             android:textColor="@color/white"
             />
@@ -163,9 +179,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:gravity="center"
             android:text="정상 체중"
+            android:textStyle="bold"
             android:textColor="@color/white"
             />
 
@@ -174,7 +191,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
+            android:gravity="center"
             android:textColor="@color/white"
             />
 
@@ -194,7 +212,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:gravity="center"
             android:textColor="@color/white"
             />
@@ -203,9 +221,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:gravity="center"
-            android:text="과체중"
+            android:text="과체중/비만"
+            android:textStyle="bold"
             android:textColor="@color/white"
             />
 
@@ -214,7 +233,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15dp"
+            android:textSize="20dp"
+            android:gravity="center"
             android:textColor="@color/white"
             />
 
