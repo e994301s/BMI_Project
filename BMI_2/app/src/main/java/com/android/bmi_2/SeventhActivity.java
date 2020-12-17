@@ -14,7 +14,7 @@ public class SeventhActivity extends Activity {
 
     TextView resultBMI, resultRecommend;
     ImageView resultImage;
-    int height, weight;
+    int height, weight, weightGoal;
     double bmiResultCalc;
 
 
@@ -23,12 +23,22 @@ public class SeventhActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seventh);
 
+        Intent intent = getIntent();
+        height = intent.getIntExtra("height", 0);
+        weight = intent.getIntExtra("weight", 0);
+
+        TextView current = findViewById(R.id.weightCurrent_seventh);
+        current.setText(Integer.toString(weight));
+
+        TextView goal = findViewById(R.id.weightGoal_seventh);
+        goal.setText(Integer.toString(weightCalc()));
+
         resultImage = findViewById(R.id.resultImage_seventh);
         resultBMI = findViewById(R.id.resultBMI_seventh);
         resultRecommend = findViewById(R.id.resultRecommend_seventh);
 
-        resultBMI.setText(Double.toString(bmiCalc()));
-        resultRecommend.setText("당신은 " + bmiType() + "입니다.");
+        resultBMI.setText(Double.toString(bmiCalc()).substring(0, 5));
+        resultRecommend.setText(bmiType());
 
         findViewById(R.id.btnExercise_seventh).setOnClickListener(mClick);
     }
@@ -36,13 +46,18 @@ public class SeventhActivity extends Activity {
 
     // bmi 계산 method
     private double bmiCalc(){
-        Intent intent = getIntent();
-        height = intent.getIntExtra("height", 0);
-        weight = intent.getIntExtra("weight", 0);
 
-        bmiResultCalc = weight / (height * height * 0.00001);
+        bmiResultCalc = weight / (height * height * 0.0001);
 
         return bmiResultCalc;
+    }
+
+    // 정상 체중 계산 method (bmi 20 기준)
+    private int weightCalc(){
+
+        weightGoal = (int)(20 * height * height * 0.0001);
+
+        return weightGoal;
     }
 
     // bmi 결과에 따른 타입
