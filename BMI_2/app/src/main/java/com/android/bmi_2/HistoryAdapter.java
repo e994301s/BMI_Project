@@ -44,11 +44,13 @@ public class HistoryAdapter extends BaseAdapter {
             convertView = inflater.inflate(this.layout, parent, false);
         }
         ImageView imagehis = convertView.findViewById(R.id.imagehis);
+        TextView namehis = convertView.findViewById(R.id.namehis);
         TextView heighthis = convertView.findViewById(R.id.heighthis);
         TextView weigthhis = convertView.findViewById(R.id.weigthhis);
         TextView bmihis = convertView.findViewById(R.id.bmihis);
 
         imagehis.setImageResource(data.get(position).getIcon());
+        namehis.setText(data.get(position).getName());
         heighthis.setText(data.get(position).getHeight());
         weigthhis.setText(data.get(position).getWeight());
         bmihis.setText(data.get(position).getBmi());
