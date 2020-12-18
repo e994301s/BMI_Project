@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/bmidetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="right"
+        android:backgroundTint="#85C4F6"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:textColor="#ffffff"
+        android:text="BMI❔"
+        android:textSize="20dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/mainimg"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+
+        />
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="이름을 입력하세요"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/enter_main"
+        android:layout_marginBottom="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#85C4F6"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:textColor="#FFFFFF"
+        android:text="입장하기" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copyright © 2020 - 김대환, 박경미, 박인영, 송예진, 유민규  All rights reserved."
+        android:textSize="11dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        />
+
+
+</LinearLayout>
