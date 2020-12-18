@@ -75,6 +75,15 @@ public class EighthActivity extends Activity {
         // 리스트 데이터가 변경되었으므로 아답터를 갱신하여 검색된 데이터를 화면에 보여준다.
         adapter.notifyDataSetChanged();
     }
+
+    private void settingList() {
+        data.add(new History(R.drawable.m2, "175", "60", "유지", "김대환"));
+        data.add(new History(R.drawable.m3, "180", "80", "-6kg", "김대현"));
+        data.add(new History(R.drawable.m2, "181", "74", "유지", "김대훈"));
+        data.add(new History(R.drawable.m4, "178", "85", "-13", "김대장"));
+        data.add(new History(R.drawable.m3, "173", "60", "유지", "김대창"));
+        data.add(new History(R.drawable.m1, "170", "50", "+4kg", "김막창"));
+    }
 }
 
 
