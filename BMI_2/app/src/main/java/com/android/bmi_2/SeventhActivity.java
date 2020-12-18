@@ -23,6 +23,7 @@ public class SeventhActivity extends Activity {
 
 
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,7 @@ public class SeventhActivity extends Activity {
 
         resultImage = findViewById(R.id.resultImage_seventh);
         resultBMI = findViewById(R.id.resultBMI_seventh);
-        resultRecommend = findViewById(R.id.resultRecommend_seventh);
+       // resultRecommend = findViewById(R.id.resultRecommend_seventh);
         //resultRecommend1 = findViewById(R.id.resultRecommend1_seventh);
 
         TextView lowerMax = findViewById(R.id.lowerMax_seventh);
@@ -58,6 +59,26 @@ public class SeventhActivity extends Activity {
 
         bmiType();
         findViewById(R.id.btnExercise_seventh).setOnClickListener(mClick);
+
+        resultRecommend = findViewById(R.id.history_seventh);
+        resultRecommend1 = findViewById(R.id.evaluation_seventh);
+
+        resultRecommend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SeventhActivity.this , EighthActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        resultRecommend1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SeventhActivity.this , FifthActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 

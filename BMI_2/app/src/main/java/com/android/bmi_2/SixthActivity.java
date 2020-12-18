@@ -1,6 +1,7 @@
 package com.android.bmi_2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,10 +15,14 @@ public class SixthActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sixth);
+
+            Intent intent = getIntent();
+            String exerciseTitle = intent.getStringExtra("exercise");
 
             video= findViewById(R.id.video);
             //Video Uri
-            Uri videoUri= Uri.parse("android.resource://" + getPackageName() +"/raw/video1");
+            Uri videoUri= Uri.parse("android.resource://" + getPackageName() +"/raw/"+exerciseTitle);
 
             //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
             video.setMediaController(new MediaController(this));
