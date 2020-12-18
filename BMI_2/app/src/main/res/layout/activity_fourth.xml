@@ -28,31 +28,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_gravity="center|bottom"
+        android:gravity="center"
         >
 
         <EditText
             android:id="@+id/editKg"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:gravity="center"
             />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30dp"
             android:text="kg"
             android:textFontWeight="3"
-            android:gravity="center"
-            android:layout_weight="1"
+            android:textStyle="italic"
             />
     </LinearLayout>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="2"
+    android:gravity="center|top"
+    >
 
     <SeekBar
         android:id="@+id/sb01"
-        android:layout_width="300sp"
-        android:layout_height="40sp"
-        android:layout_marginTop="200dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:background="@color/material_on_primary_disabled"
         android:max='100'
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
@@ -62,12 +69,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         android:progress="50"
-        android:layout_gravity="center"/>
-
+        />
+</LinearLayout>
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:gravity="center"
         >
         <Button
             android:id="@+id/back"
@@ -75,7 +83,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="10px"
             android:text="이전"
-            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:backgroundTint="#85c4f6"
+
+            android:typeface="monospace"
+            android:textStyle="bold"
             />
         <Button
             android:id="@+id/next"
@@ -83,7 +95,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="10px"
             android:text="다음"
-            android:layout_weight="1"
+            android:layout_marginLeft="160dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#85c4f6"
+            android:typeface="monospace"
+            android:textStyle="bold"
             />
 
     </LinearLayout>

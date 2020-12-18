@@ -22,7 +22,6 @@ public class ThirdActivity extends Activity {
     ImageView image1;
     Button nextBtn;
     Button back;
-    String TAG = "MainActivity";
     int height = 0;
     String female;
     String male;
@@ -44,8 +43,7 @@ public class ThirdActivity extends Activity {
         Intent intent = getIntent();
         female = intent.getStringExtra("gender");
         male = intent.getStringExtra("gender");
-        Log.v(TAG, String.valueOf(intent));
-        Log.v(TAG, female);
+
 
         if (female.equals("female")) {
             image1.setImageResource(R.drawable.w1);
@@ -80,13 +78,13 @@ public class ThirdActivity extends Activity {
                 if (male.equals("male")) {
                     image1.setImageResource(R.drawable.m1);
                     if (progress >= 150 && progress < 160) {
-                        image1.setImageResource(R.drawable.mh4);
-                    } else if (progress >= 160 && progress < 170) {
-                        image1.setImageResource(R.drawable.mh3);
-                    } else if (progress >= 170 && progress < 180) {
-                        image1.setImageResource(R.drawable.mh2);
-                    } else if (progress >= 180 && progress < 300) {
                         image1.setImageResource(R.drawable.mh1);
+                    } else if (progress >= 160 && progress < 170) {
+                        image1.setImageResource(R.drawable.mh2);
+                    } else if (progress >= 170 && progress < 180) {
+                        image1.setImageResource(R.drawable.mh3);
+                    } else if (progress >= 180 && progress < 300) {
+                        image1.setImageResource(R.drawable.mh4);
                     }
                 }
 
