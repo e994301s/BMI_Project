@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="비만도(BMI)"
+        android:textSize="60dp"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="2"
+        android:src="@drawable/maindialog" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="신체질량지수(Body Mass Index)를 의미하며\n신장과 체중의 비율을\n사용한 체중의 객관적인 지수입니다."
+        android:textSize="13dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:padding="40dp"
+        android:text="🏃 비만도 계산 방법 \n- 키를 m 단위로 환산한다. ex)160㎝→1.6m
+\n- 키를 제곱한다. ex)1.6m×1.6m\n- 체중을 키의 제곱으로 나눈다.\nex)50㎏÷(1.6m×1.6m)=19.53kg/m2 → 정상체중 \n"
+        android:textColor="#000000" />
+
+<!--    <Button-->
+<!--        android:id="@+id/backbtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#A6CFEF"-->
+<!--        android:text="돌아가기" />-->
+
+</LinearLayout>
