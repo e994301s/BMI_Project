@@ -25,7 +25,8 @@
         <activity android:name=".FifthActivity"
             android:label="Result" />
         <activity android:name=".SixthActivity"
-            android:label="Video" />
+            android:label="Video"
+            android:screenOrientation="landscape"/>
         <activity android:name=".SeventhActivity"
             android:label="evaluation" />
         <activity android:name=".EighthActivity"

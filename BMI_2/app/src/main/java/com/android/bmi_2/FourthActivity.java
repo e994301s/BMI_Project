@@ -16,7 +16,11 @@ public class FourthActivity extends Activity {
     EditText editKg;
     ImageView image1;
     Button nextBtn;
+    Button back;
     int weight;
+    int height = 0;
+    String female;
+    String male;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +32,15 @@ public class FourthActivity extends Activity {
         editKg = findViewById(R.id.editKg);
         image1 = findViewById(R.id.image1);
         nextBtn = findViewById(R.id.next);
+        back = findViewById(R.id.back);
+
+        nextBtn.setOnClickListener(mClickListener);
+        back.setOnClickListener(mClickListener);
 
         Intent intent = getIntent();
-        String female = intent.getStringExtra("female");
-        String male = intent.getStringExtra("male");
-        int height = intent.getIntExtra("height", 0);
+        female = intent.getStringExtra("gender");
+        male = intent.getStringExtra("gender");
+        height = intent.getIntExtra("height", 0);
 
 
         sb01.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -42,14 +50,27 @@ public class FourthActivity extends Activity {
                 editKg.setText("" + progress);
                 weight =progress;
 
-                if (progress >=150&&progress<160){
-                    image1.setImageResource(R.drawable.m1);
-                }else if(progress>=160&&progress<170){
-                    image1.setImageResource(R.drawable.m2);
-                }else if(progress>=170&&progress<180){
-                    image1.setImageResource(R.drawable.m3);
-                }else if (progress>=180&&progress<300){
-                    image1.setImageResource(R.drawable.m4);
+                if (female.equals("female")) {
+                    if (progress >= 0 && progress < 43) {
+                        image1.setImageResource(R.drawable.w1);
+                    } else if (progress >= 43 && progress < 56) {
+                        image1.setImageResource(R.drawable.w2);
+                    } else if (progress >= 56 && progress < 61) {
+                        image1.setImageResource(R.drawable.w3);
+                    } else if (progress >= 61 && progress < 100) {
+                        image1.setImageResource(R.drawable.w4);
+                    }
+                }
+                if (male.equals("male")) {
+                    if (progress >= 0 && progress < 58) {
+                        image1.setImageResource(R.drawable.m1);
+                    } else if (progress >= 58 && progress < 76) {
+                        image1.setImageResource(R.drawable.m2);
+                    } else if (progress >= 76 && progress < 83) {
+                        image1.setImageResource(R.drawable.m3);
+                    } else if (progress >= 83 && progress < 150) {
+                        image1.setImageResource(R.drawable.m4);
+                    }
                 }
 
             }
@@ -66,4 +87,27 @@ public class FourthActivity extends Activity {
         });
 
     }
+
+    View.OnClickListener mClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = null;
+            switch (v.getId()) {
+
+                case R.id.next:
+                    intent = new Intent(FourthActivity.this, FifthActivity.class);
+                    intent.putExtra("height", height);
+                    intent.putExtra("weight", weight);
+                    intent.putExtra("female", female);
+                    intent.putExtra("male", height);
+                    startActivity(intent);
+                    break;
+                case  R.id.back:
+                    intent = new Intent(FourthActivity.this, ThirdActivity.class);
+                    startActivity(intent);
+                    break;
+                default:
+            }
+        }
+    };
 }

@@ -20,13 +20,13 @@ public class FifthActivity extends Activity {
         findViewById(R.id.ratingBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ratingBar = findViewById(R.id.rating);
-//                String rating = getText(ratingBar).toString();
+                ratingBar = findViewById(R.id.rating);
+                float rating = ratingBar.getRating();
 
                 new AlertDialog.Builder(FifthActivity.this)
                         .setIcon(R.mipmap.ic_launcher)
                         .setTitle("* 별점 등록 완료! *")
-                        .setMessage("감사합니다! 😍")
+                        .setMessage(rating + "점이 등록되었습니다! \n감사합니다! 😍")
                         // 버튼명   // 버튼 리스너명
                         .setPositiveButton("닫기", null)
                         .show();

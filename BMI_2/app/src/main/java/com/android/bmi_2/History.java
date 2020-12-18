@@ -5,12 +5,22 @@ public class History {
     private String height;
     private String weight;
     private String bmi;
+    private String name;
 
-    public History(int icon, String height, String weight, String bmi) {
+    public History(int icon, String height, String weight, String bmi, String name) {
         this.icon = icon;
         this.height = height;
         this.weight = weight;
         this.bmi = bmi;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getIcon() {
