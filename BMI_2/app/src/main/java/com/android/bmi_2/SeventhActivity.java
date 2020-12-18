@@ -32,16 +32,16 @@ public class SeventhActivity extends Activity {
         height = intent.getIntExtra("height", 0);
         weight = intent.getIntExtra("weight", 0);
 
-        TextView current = findViewById(R.id.weightCurrent_seventh);
-        current.setText(Integer.toString(weight) + "kg");
-
-        TextView goal = findViewById(R.id.weightGoal_seventh);
-        goal.setText(Integer.toString(weightCalc())+ "kg");
+//        TextView current = findViewById(R.id.weightCurrent_seventh);
+//        current.setText(Integer.toString(weight) + "kg");
+//
+//        TextView goal = findViewById(R.id.weightGoal_seventh);
+//        goal.setText(Integer.toString(weightCalc())+ "kg");
 
         resultImage = findViewById(R.id.resultImage_seventh);
         resultBMI = findViewById(R.id.resultBMI_seventh);
         resultRecommend = findViewById(R.id.resultRecommend_seventh);
-        resultRecommend1 = findViewById(R.id.resultRecommend1_seventh);
+        //resultRecommend1 = findViewById(R.id.resultRecommend1_seventh);
 
         TextView lowerMax = findViewById(R.id.lowerMax_seventh);
         lowerMax.setText(" < "+ lowerMaxCalc() + "kg");
@@ -102,35 +102,35 @@ public class SeventhActivity extends Activity {
            // resultBMI.setTextColor(ContextCompat.getColor(this, R.color.sky));
             resultBMI.setText(Double.toString(bmiCalc()).substring(0, 5));
             resultImage.setImageResource(R.drawable.lower);
-            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.sky));
-            resultRecommend.setText("저체중");
-            resultRecommend1.setText("당신은 근육량을 " + (weightCalc()-weight) + "kg 증량을 추천합니다!");
+//            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.sky));
+//            resultRecommend.setText("저체중");
+//            resultRecommend1.setText("당신은 근육량을 " + (weightCalc()-weight) + "kg 증량을 추천합니다!");
 
         } else if (bmiResultCalc>=18.6 && bmiResultCalc<22.9){
            // resultBMI.setTextColor(ContextCompat.getColor(this, R.color.green));
             resultBMI.setText(Double.toString(bmiCalc()).substring(0, 5));
             resultImage.setImageResource(R.drawable.normal);
-            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.green));
-            resultRecommend.setText("정상");
-            resultRecommend1.setText("당신은 꾸준한 운동으로 현재 몸을 유지하세요!");
+//            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.green));
+//            resultRecommend.setText("정상");
+//            resultRecommend1.setText("당신은 꾸준한 운동으로 현재 몸을 유지 하세요!");
 
 
         } else if (bmiResultCalc>=22.9 && bmiResultCalc<24.9) {
            // resultBMI.setTextColor(ContextCompat.getColor(this, R.color.red));
             resultBMI.setText(Double.toString(bmiCalc()).substring(0, 5));
             resultImage.setImageResource(R.drawable.over);
-            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.red));
-            resultRecommend.setText("과체중");
-            resultRecommend1.setText("당신은 체중을 " + (weight - weightCalc()) + "kg 감량을 위해\n운동이 필요합니다!");
+//            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.red));
+//            resultRecommend.setText("과체중");
+//            resultRecommend1.setText("당신은 체중을 " + (weight - weightCalc()) + "kg 감량을 위해\n운동이 필요합니다!");
 
 
         } else if (bmiResultCalc>=24.9){
            // resultBMI.setTextColor(ContextCompat.getColor(this, R.color.red));
             resultBMI.setText(Double.toString(bmiCalc()).substring(0, 5));
             resultImage.setImageResource(R.drawable.fat);
-            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.red));
-            resultRecommend.setText("비만");
-            resultRecommend1.setText("당신은 체중을 " + (weight - weightCalc()) + "kg 감량을 위해\n운동과 식이요법을 병행하셔야 합니다!");
+//            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.red));
+//            resultRecommend.setText("비만");
+//            resultRecommend1.setText("당신은 체중을 " + (weight - weightCalc()) + "kg 감량을 위해\n운동과 식이요법을 병행하셔야 합니다!");
 
         }
     }
@@ -143,8 +143,8 @@ public class SeventhActivity extends Activity {
             Intent intent = new Intent(SeventhActivity.this , SixthActivity.class);
             // 랜덤 영상 play
             Random random = new Random();
-            String[] exerciseTitle = {"exercise1","exercise2","exercise3","exercise4"};
-            int exerciseNum = random.nextInt(4);
+            String[] exerciseTitle = {"video1","video2"};
+            int exerciseNum = random.nextInt(2);
             intent.putExtra("exercise", exerciseTitle[exerciseNum]);
 
             startActivity(intent);
