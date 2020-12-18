@@ -96,7 +96,7 @@ public class FourthActivity extends Activity {
             switch (v.getId()) {
 
                 case R.id.next:
-                    intent = new Intent(FourthActivity.this, FifthActivity.class);
+                    intent = new Intent(FourthActivity.this, SeventhActivity.class);
                     intent.putExtra("height", height);
                     intent.putExtra("weight", weight);
                     intent.putExtra("female", female);

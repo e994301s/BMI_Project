@@ -28,6 +28,7 @@ public class EighthActivity extends Activity {
         setContentView(R.layout.activity_eighth);
         editSearch = findViewById(R.id.search_name);
         data = new ArrayList<History>();
+        settingList();
         search = new ArrayList<History>();
         search.addAll(data);
         adapter = new HistoryAdapter(EighthActivity.this, R.layout.eighth_layout, data);

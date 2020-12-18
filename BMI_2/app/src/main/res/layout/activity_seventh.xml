@@ -73,14 +73,42 @@
 
 <!--    </LinearLayout>-->
 
-    <TextView
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:textSize="50dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        />
+        android:layout_weight="0.5"
+        android:backgroundTint="#85C4F6"
+        android:gravity="right"
+
+        >
+
+        <TextView
+            android:id="@+id/history_seventh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="전체 결과보기"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/evaluation_seventh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="앱 평가"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="20dp"
+            />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/resultImage_seventh"
@@ -89,6 +117,7 @@
         android:adjustViewBounds="true"
         android:maxHeight="300px"
         android:layout_weight="2"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center_vertical"
         />
 
@@ -261,6 +290,11 @@
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp"
+        android:backgroundTint="@color/black"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:typeface="monospace"
+
         />
 
 
