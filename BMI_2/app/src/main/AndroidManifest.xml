@@ -16,21 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"
-            android:label="Gender" />
-        <activity android:name=".ThirdActivity"
-            android:label="Height" />
-        <activity android:name=".FourthActivity"
-            android:label="Weight" />
-        <activity android:name=".FifthActivity"
-            android:label="Result" />
+        <activity android:name=".SecondActivity"/>
+        <activity android:name=".ThirdActivity"/>
+        <activity android:name=".FourthActivity"/>
+        <activity android:name=".FifthActivity"/>
         <activity android:name=".SixthActivity"
-            android:label="Video"
             android:screenOrientation="landscape"/>
-        <activity android:name=".SeventhActivity"
-            android:label="evaluation" />
-        <activity android:name=".EighthActivity"
-            android:label="List" />
+        <activity android:name=".SeventhActivity"/>
+        <activity android:name=".EighthActivity" />
     </application>
 
 </manifest>
