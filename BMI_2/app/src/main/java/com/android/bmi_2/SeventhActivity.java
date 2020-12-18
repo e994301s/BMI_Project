@@ -29,6 +29,7 @@ public class SeventhActivity extends Activity {
         setContentView(R.layout.activity_seventh);
 
         Intent intent = getIntent();
+
         height = intent.getIntExtra("height", 0);
         weight = intent.getIntExtra("weight", 0);
 

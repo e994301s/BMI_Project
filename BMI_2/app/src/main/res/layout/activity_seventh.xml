@@ -102,6 +102,7 @@
         android:textStyle="bold"
         />
 
+
 <!--    <TextView-->
 <!--        android:id="@+id/resultRecommend_seventh"-->
 <!--        android:layout_width="match_parent"-->
