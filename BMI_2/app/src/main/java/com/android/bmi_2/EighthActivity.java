@@ -28,7 +28,6 @@ public class EighthActivity extends Activity {
         setContentView(R.layout.activity_eighth);
         editSearch = findViewById(R.id.search_name);
         data = new ArrayList<History>();
-        settingList();
         search = new ArrayList<History>();
         search.addAll(data);
         adapter = new HistoryAdapter(EighthActivity.this, R.layout.eighth_layout, data);
@@ -67,7 +66,7 @@ public class EighthActivity extends Activity {
         // 문자 입력을 할때..
         else {
             // 리스트의 모든 데이터를 검색한다.
-            for(int i = 0; i < search.size(); i++) {
+            for (int i = 0; i < search.size(); i++) {
                 if (search.get(i).getName().contains(charText)) {
                     data.add(search.get(i));
                 }
@@ -76,14 +75,6 @@ public class EighthActivity extends Activity {
         // 리스트 데이터가 변경되었으므로 아답터를 갱신하여 검색된 데이터를 화면에 보여준다.
         adapter.notifyDataSetChanged();
     }
-
-    private void settingList(){
-        data.add(new History(R.drawable.dog,"175","60","+30", "김대환"));
-        data.add(new History(R.drawable.dog,"175","60","+30", "김대현"));
-        data.add(new History(R.drawable.dog,"175","60","+30", "김대훈"));
-        data.add(new History(R.drawable.dog,"175","60","+30", "김대장"));
-        data.add(new History(R.drawable.dog,"175","60","+30", "김대창"));
-        data.add(new History(R.drawable.dog,"175","60","+30", "김막창"));
-
-    }
 }
+
+

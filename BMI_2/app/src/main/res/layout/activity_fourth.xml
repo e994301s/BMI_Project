@@ -54,14 +54,14 @@
         android:layout_height="40sp"
         android:layout_marginTop="200dp"
         android:background="@color/material_on_primary_disabled"
-        android:max='150'
+        android:max='100'
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        android:progress="75"
+        android:progress="50"
         android:layout_gravity="center"/>
 
     <LinearLayout
