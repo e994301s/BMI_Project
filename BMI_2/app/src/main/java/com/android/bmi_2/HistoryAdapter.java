@@ -48,12 +48,14 @@ public class HistoryAdapter extends BaseAdapter {
         TextView heighthis = convertView.findViewById(R.id.heighthis);
         TextView weigthhis = convertView.findViewById(R.id.weigthhis);
         TextView bmihis = convertView.findViewById(R.id.bmihis);
+        TextView needhis = convertView.findViewById(R.id.needhis);
 
         imagehis.setImageResource(data.get(position).getIcon());
         namehis.setText(data.get(position).getName());
         heighthis.setText(data.get(position).getHeight());
         weigthhis.setText(data.get(position).getWeight());
         bmihis.setText(data.get(position).getBmi());
+        needhis.setText(data.get(position).getUserneed());
 
         return convertView;
     }

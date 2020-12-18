@@ -2,24 +2,18 @@ package com.android.bmi_2;
 
 public class History {
     private int icon;
-    private String height;
-    private String weight;
-    private String bmi;
+    private int height;
+    private int weight;
+    private int bmi;
+    private int userneed;
     private String name;
 
-    public History(int icon, String height, String weight, String bmi, String name) {
+    public History(int icon, int height, int weight, int bmi, int userneed, String name) {
         this.icon = icon;
         this.height = height;
         this.weight = weight;
         this.bmi = bmi;
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+        this.userneed = userneed;
         this.name = name;
     }
 
@@ -31,27 +25,43 @@ public class History {
         this.icon = icon;
     }
 
-    public String getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
-    public String getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    public String getBmi() {
+    public int getBmi() {
         return bmi;
     }
 
-    public void setBmi(String bmi) {
+    public void setBmi(int bmi) {
         this.bmi = bmi;
+    }
+
+    public int getUserneed() {
+        return userneed;
+    }
+
+    public void setUserneed(int userneed) {
+        this.userneed = userneed;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
