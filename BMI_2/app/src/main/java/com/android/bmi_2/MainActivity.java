@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.BaseRequestOptions;
@@ -56,9 +57,14 @@ import com.bumptech.glide.request.BaseRequestOptions;
           @Override
           public void onClick(View v) {
               String username = editText.getText().toString();
+              if(username.length()==0){
+                  Toast.makeText(MainActivity.this, "이럼을 입력해주세요.", Toast.LENGTH_SHORT).show();
+              } else {
+
               Intent intent = new Intent(MainActivity.this, SecondActivity.class);
               intent.putExtra("username", username);
               startActivity(intent);
+              }
           }
       });
 
