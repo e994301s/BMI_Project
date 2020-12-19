@@ -22,6 +22,7 @@ public class FourthActivity extends Activity {
     int height = 0;
     String female;
     String male;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,7 @@ public class FourthActivity extends Activity {
         female = intent.getStringExtra("gender");
         male = intent.getStringExtra("gender");
         height = intent.getIntExtra("height", 0);
-
+        username  = intent.getStringExtra("username");
 
         sb01.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -93,10 +94,12 @@ public class FourthActivity extends Activity {
         @Override
         public void onClick(View v) {
             Intent intent = null;
+
             switch (v.getId()) {
 
                 case R.id.next:
                     intent = new Intent(FourthActivity.this, SeventhActivity.class);
+                    intent.putExtra("username", username);
                     intent.putExtra("height", height);
                     intent.putExtra("weight", weight);
                     intent.putExtra("female", female);

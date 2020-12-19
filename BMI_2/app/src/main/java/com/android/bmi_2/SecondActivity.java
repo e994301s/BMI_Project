@@ -14,13 +14,16 @@ import androidx.annotation.Nullable;
 public class SecondActivity extends Activity {
 
     Button backBtn, nextBtn;
+    String username;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-
+        Intent intent = getIntent();
+        username = intent.getStringExtra("username");
+        intent.putExtra("username", username);
 
         ImageView female = findViewById(R.id.female);
 
@@ -56,12 +59,14 @@ public class SecondActivity extends Activity {
                 // 화면 넘길때는 intent가 필요하다! ,를 기준으로 from & to 지정해줘야 함.
                 // MainActivity 에서 SubActivity 로 보내겠다!
                  Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+
                 if (sw.isChecked()) {
                     intent.putExtra("gender", "female");
                 } else{
                     intent.putExtra("gender", "male");
                 }
-                 startActivity(intent);
+
+                startActivity(intent);
             }
         });
     } // onCreate End

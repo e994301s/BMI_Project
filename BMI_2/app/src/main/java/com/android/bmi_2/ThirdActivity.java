@@ -26,6 +26,7 @@ public class ThirdActivity extends Activity {
     String female;
     String male;
     String gender;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ public class ThirdActivity extends Activity {
         Intent intent = getIntent();
         female = intent.getStringExtra("gender");
         male = intent.getStringExtra("gender");
+        username  = intent.getStringExtra("username");
+        intent.putExtra("username", username);
 
 
         if (female.equals("female")) {
