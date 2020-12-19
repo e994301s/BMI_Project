@@ -136,7 +136,7 @@ public class SeventhActivity extends Activity {
 //            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.sky));
 //            resultRecommend.setText("저체중");
 //            resultRecommend1.setText("당신은 근육량을 " + (weightCalc()-weight) + "kg 증량을 추천합니다!");
-            resulticon =  R.drawable.lower;
+            resulticon =  R.drawable.m1;
         } else if (bmiResultCalc>=18.6 && bmiResultCalc<22.9){
            // resultBMI.setTextColor(ContextCompat.getColor(this, R.color.green));
             resultBMI.setText(Double.toString(bmiCalc()).substring(0, 5));
@@ -144,7 +144,7 @@ public class SeventhActivity extends Activity {
 //            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.green));
 //            resultRecommend.setText("정상");
 //            resultRecommend1.setText("당신은 꾸준한 운동으로 현재 몸을 유지 하세요!");
-            resulticon = R.drawable.normal;
+            resulticon = R.drawable.m2;
 
         } else if (bmiResultCalc>=22.9 && bmiResultCalc<24.9) {
            // resultBMI.setTextColor(ContextCompat.getColor(this, R.color.red));
@@ -154,7 +154,7 @@ public class SeventhActivity extends Activity {
 //            resultRecommend.setText("과체중");
 //            resultRecommend1.setText("당신은 체중을 " + (weight - weightCalc()) + "kg 감량을 위해\n운동이 필요합니다!");
 
-            resulticon = R.drawable.over;
+            resulticon = R.drawable.m3;
         } else if (bmiResultCalc>=24.9){
            // resultBMI.setTextColor(ContextCompat.getColor(this, R.color.red));
             resultBMI.setText(Double.toString(bmiCalc()).substring(0, 5));
@@ -162,7 +162,7 @@ public class SeventhActivity extends Activity {
 //            resultRecommend.setTextColor(ContextCompat.getColor(this, R.color.red));
 //            resultRecommend.setText("비만");
 //            resultRecommend1.setText("-1당신은 체중을 " + (weight - weightCalc()) + "kg 감량을 위해\n운동과 식이요법을 병행하셔야 합니다!");
-            resulticon = R.drawable.fat;
+            resulticon = R.drawable.m4;
         }
         return resulticon;
     }
