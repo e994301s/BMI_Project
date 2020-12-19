@@ -23,7 +23,7 @@ public class SecondActivity extends Activity {
 
         Intent intent = getIntent();
         username = intent.getStringExtra("username");
-        intent.putExtra("username", username);
+
 
         ImageView female = findViewById(R.id.female);
 
@@ -65,6 +65,7 @@ public class SecondActivity extends Activity {
                 } else{
                     intent.putExtra("gender", "male");
                 }
+                intent.putExtra("username", username);
 
                 startActivity(intent);
             }

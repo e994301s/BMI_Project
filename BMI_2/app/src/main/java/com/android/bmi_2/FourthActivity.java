@@ -108,6 +108,7 @@ public class FourthActivity extends Activity {
                     break;
                 case  R.id.back:
                     intent = new Intent(FourthActivity.this, ThirdActivity.class);
+                    intent.putExtra("username", username);
                     startActivity(intent);
                     break;
                 default:

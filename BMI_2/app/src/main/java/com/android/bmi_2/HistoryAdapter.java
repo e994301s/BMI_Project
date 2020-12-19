@@ -1,6 +1,7 @@
 package com.android.bmi_2;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ public class HistoryAdapter extends BaseAdapter {
     private int layout = 0;
     private ArrayList<History> data = null;
     private LayoutInflater inflater = null;
+    private final String TAG = "Adapter";
 
     public HistoryAdapter(Context hContext, int layout, ArrayList<History> data) {
         this.hContext = hContext;
@@ -52,10 +54,17 @@ public class HistoryAdapter extends BaseAdapter {
 
         imagehis.setImageResource(data.get(position).getIcon());
         namehis.setText(data.get(position).getName());
-        heighthis.setText(data.get(position).getHeight());
-        weigthhis.setText(data.get(position).getWeight());
-        bmihis.setText(data.get(position).getBmi());
-        needhis.setText(data.get(position).getUserneed());
+        heighthis.setText(Integer.toString(data.get(position).getHeight()));
+        weigthhis.setText(Integer.toString(data.get(position).getWeight()));
+        bmihis.setText(Integer.toString(data.get(position).getBmi()));
+        needhis.setText(Integer.toString(data.get(position).getUserneed()));
+
+        Log.v(TAG, Integer.toString(data.get(position).getIcon()));
+        Log.v(TAG, data.get(position).getName());
+        Log.v(TAG, Integer.toString(data.get(position).getHeight()));
+        Log.v(TAG, Integer.toString((data.get(position).getWeight())));
+        Log.v(TAG, Integer.toString(data.get(position).getBmi()));
+        Log.v(TAG, Integer.toString(data.get(position).getUserneed()));
 
         return convertView;
     }

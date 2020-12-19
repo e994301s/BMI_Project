@@ -27,7 +27,7 @@ public class SeventhActivity extends Activity {
     HistoryDB historyDB;
 
     String username;
-    private final String TAG = "Seventh";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -185,11 +185,7 @@ public class SeventhActivity extends Activity {
 
     private void inserDB(int dbheight, int dbweight, int dbbmi, int dbweightGoal, int dbicon, String dbusername){
         historyDB = new HistoryDB(SeventhActivity.this);
-        Log.v(TAG, Integer.toString(dbheight));
-        Log.v(TAG, Integer.toString(dbweight));
-        Log.v(TAG, Integer.toString(dbbmi));
-        Log.v(TAG, Integer.toString(dbweightGoal));
-        Log.v(TAG, Integer.toString(dbicon));
+
 
         try {
             DB = historyDB.getWritableDatabase();

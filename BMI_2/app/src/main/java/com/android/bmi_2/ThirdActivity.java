@@ -45,7 +45,7 @@ public class ThirdActivity extends Activity {
         female = intent.getStringExtra("gender");
         male = intent.getStringExtra("gender");
         username  = intent.getStringExtra("username");
-        intent.putExtra("username", username);
+
 
 
         if (female.equals("female")) {
@@ -118,10 +118,12 @@ public class ThirdActivity extends Activity {
                     intent.putExtra("height", height);
                     intent.putExtra("gender", female);
                     intent.putExtra("gender", male);
+                    intent.putExtra("username", username);
                     startActivity(intent);
                     break;
                 case  R.id.back:
-                    intent = new Intent(ThirdActivity.this, MainActivity.class);
+                    intent = new Intent(ThirdActivity.this, SecondActivity.class);
+                    intent.putExtra("username", username);
                     startActivity(intent);
                     break;
                 default:
